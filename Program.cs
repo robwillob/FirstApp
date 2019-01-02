@@ -29,6 +29,19 @@ namespace Classwork
             Console.WriteLine(something);
 
             Console.WriteLine(myTypes.LongFromInt(5600));
+            myTypes.BasicMath();
+
+            myTypes.CheckOperators();
+
+            myTypes.IncrementDecrement();
+
+            myTypes.SpecialValues();
+
+            myTypes.ComparisonOperators();
+
+            myTypes.OtherOperators();
+
+            
         }
 
         static void MyHouseResults()
@@ -56,6 +69,7 @@ namespace Classwork
 
             Console.WriteLine(myComputer.operatingSystem);
         }
+
         }
 
  

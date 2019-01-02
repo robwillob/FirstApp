@@ -63,5 +63,87 @@ namespace Lessons
             long total = value;
             return total;
         }
+
+        // Method to demonstrate Aarithmetic Operators
+        public void BasicMath()
+        {
+            int myVal = 5, myOtherVal = 10;
+
+            int addVal = myVal + myOtherVal;
+            int subtractVal = myOtherVal - myVal;
+            int multiplyVal = myVal * myOtherVal;
+            int divisionVal = myVal / myOtherVal;
+            int modulusVal = myVal % myOtherVal;
+
+            Console.WriteLine (addVal);
+            Console.WriteLine (subtractVal);
+            Console.WriteLine (multiplyVal);
+            Console.WriteLine (divisionVal);
+            Console.WriteLine (modulusVal);
+        }
+
+        public void CheckOperators(){
+            int test = 100, test2 = 100;
+
+            int testVal = checked( test * test2);
+
+            checked
+            {
+                // make the value 300000000 to fail.
+                int testAgain = test * 300;
+                Console.WriteLine(testAgain);
+            }
+            Console.WriteLine(testVal);
+        }
+
+        public void IncrementDecrement() 
+        {
+            int myValue = 13, myOther = 10;
+            // myValue = myValue + 1
+            myValue++;
+            Console.WriteLine(myValue);
+            // myOther = myOther - 1
+            myOther--;
+            Console.WriteLine(myOther);
+            --myValue;
+            Console.WriteLine(myValue);
+            ++myOther;
+            Console.WriteLine(myOther);
+        }
+
+        public void SpecialValues()
+        {
+            Console.WriteLine(2.0 / 0.0);
+            Console.WriteLine(-2.0 / 0.0);
+            Console.WriteLine(2.0 / -0.0);
+            Console.WriteLine(-2.0 / -0.0);
+            Console.WriteLine(0.0 / 0.0);
+            Console.WriteLine((2.0 / -0.0)- (2.0 / 0.0));
+            Console.WriteLine(0.0 / -0.0 == double.NaN);
+            Console.WriteLine(double.IsNaN(0.0 / 0.0));
+            Console.WriteLine(object.Equals(0.0 / 0.0, double.NaN));
+
+        }
+
+        public void ComparisonOperators() 
+        {
+            bool isCool = true;  // declaration of a bool value
+
+            int x = 3, y = 5, z = 3;
+
+            Console.WriteLine(x == y );
+            Console.WriteLine(x != y );
+            Console.WriteLine(x == z );
+        }
+
+        public void OtherOperators() 
+        {
+            int val1 = 5, val2 = 10;
+            // val1 = val1 + val2
+            Console.WriteLine(val1 += val2);
+            // val1 = val1 << val2
+            Console.WriteLine(val1 <<= val2);
+        }
     }
 }
+
