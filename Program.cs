@@ -17,7 +17,37 @@ namespace Classwork
            // MyHouseResults();
            // MyComputerResults();
            // MyNumericExamples();
-            MyStringExamples();
+           // MyStringExamples();
+            StatementSamples();
+
+           
+        }
+
+        static void StatementSamples()
+        {
+            StatementExamples se = new StatementExamples();
+           // se.SampleIf();
+           //se.SampleIfElse();
+           //se.SampleIfChain();
+           //se.SampleIfAnd();
+           //se.SampleIfOr();
+           //se.SampleConditional();
+           //se.SampleSwitch(10);
+           //se.SampleWhile();
+           //se.SampleDoWhile();
+           //se.SampleFor();
+           //se.SampleForEach();
+          // string myString = se.JumpStatementExample("Sunday");
+          // Console.WriteLine(myString);
+          BottlesSong();
+
+        }
+
+        static void BottlesSong()
+        {
+            BottlesofBeer beer = new BottlesofBeer();
+            string song = beer.BottlesOfBeerSong();
+            Console.WriteLine(song);
         } 
 
         static void MyStringExamples()
