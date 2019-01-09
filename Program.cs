@@ -13,33 +13,64 @@ namespace Classwork
          Console is a class, WriteLine is a method with a parameter*/
         static void Main(string[] args)
         {
-           // Console.WriteLine("Hello World!");
-           // MyHouseResults();
-           // MyComputerResults();
-           // MyNumericExamples();
-           // MyStringExamples();
-            StatementSamples();
+            // Console.WriteLine("Hello World!");
+            // MyHouseResults();
+            // MyComputerResults();
+            // MyNumericExamples();
+            // MyStringExamples();
+            // StatementSamples();
+            // HouseSample();
+            // StrutSample();
+            // ComputerSample();
 
-           
+        }
+
+        static void ComputerSample()
+        {
+            Computer myComputer = new Computer("8gb", "4T");
+            Console.WriteLine(myComputer.operatingSystem);
+            Console.WriteLine(myComputer.ramMemory);
+
+        }
+
+        static void StrutSample()
+        {
+            BookSample bookSample = new BookSample(4.99m, "Zombie Fallout", "Mark Tufo");
+
+            Console.WriteLine("The book " + bookSample.title + " by " + bookSample.author + " is $" + bookSample.price);
+        }
+
+        static void HouseSample()
+        {
+            House myHouse = new House("concrete", "triple pane");
+
+            Console.WriteLine(myHouse.PaintDoor);
+            Console.WriteLine(myHouse.Foundation);
+
+            myHouse.OpenDoor(true);
+
+
         }
 
         static void StatementSamples()
         {
             StatementExamples se = new StatementExamples();
-           // se.SampleIf();
-           //se.SampleIfElse();
-           //se.SampleIfChain();
-           //se.SampleIfAnd();
-           //se.SampleIfOr();
-           //se.SampleConditional();
-           //se.SampleSwitch(10);
-           //se.SampleWhile();
-           //se.SampleDoWhile();
-           //se.SampleFor();
-           //se.SampleForEach();
-          // string myString = se.JumpStatementExample("Sunday");
-          // Console.WriteLine(myString);
-          BottlesSong();
+            // se.SampleIf();
+            //se.SampleIfElse();
+            //se.SampleIfChain();
+            //se.SampleIfAnd();
+            //se.SampleIfOr();
+            //se.SampleConditional();
+            //se.SampleSwitch(10);
+            //se.SampleWhile();
+            //se.SampleDoWhile();
+            //se.SampleFor();
+            //se.SampleForEach();
+            // string myString = se.JumpStatementExample("Sunday");
+            // Console.WriteLine(myString);
+            //BottlesSong();
+
+            se.SampleDays(DaysOfWeek.Wed);
 
         }
 
@@ -48,7 +79,7 @@ namespace Classwork
             BottlesofBeer beer = new BottlesofBeer();
             string song = beer.BottlesOfBeerSong();
             Console.WriteLine(song);
-        } 
+        }
 
         static void MyStringExamples()
         {
@@ -62,10 +93,10 @@ namespace Classwork
             myTypes.EscapeExample();
             myTypes.PlaceholderExample();
             myTypes.ArrayExample();
-            myTypes.MyHouseArray(); 
+            myTypes.MyHouseArray();
             myTypes.MultiArraySample();
-            
-        }   
+
+        }
 
 
         static void MyNumericExamples()
@@ -88,7 +119,7 @@ namespace Classwork
 
             myTypes.OtherOperators();
 
-            
+
         }
 
         static void MyHouseResults()
@@ -117,10 +148,10 @@ namespace Classwork
             Console.WriteLine(myComputer.operatingSystem);
         }
 
-        }
-
- 
-      
     }
+
+
+
+}
 
 
