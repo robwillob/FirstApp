@@ -1,5 +1,6 @@
 ﻿using System;
 using Lessons;
+using Quiz;
 /*This namespace represents the file folder that the class is in. */
 
 namespace Classwork
@@ -22,8 +23,25 @@ namespace Classwork
             // HouseSample();
             // StrutSample();
             // ComputerSample();
+            QuizExample();
+
 
         }
+
+        static void QuizExample()
+        {
+            QuizClass1 Q1P1 = new QuizClass1();
+            // Q1P1.MyGrade("E");
+            Q1P1.NumDivBy();
+        }
+
+
+
+
+
+
+
+
 
         static void ComputerSample()
         {
