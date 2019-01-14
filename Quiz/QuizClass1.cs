@@ -28,6 +28,9 @@ namespace Quiz
             }
         }
 
+
+
+
         public void NumDivBy()
         {
             int x = 0;

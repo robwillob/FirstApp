@@ -23,8 +23,22 @@ namespace Classwork
             // HouseSample();
             // StrutSample();
             // ComputerSample();
-            QuizExample();
+            // QuizExample();
+            FruitSample();
+        }
+        static void FruitSample()
+        {
+            Apple myApple = new Apple();
+            myApple.EatFruit();
 
+            Fruit myFruit = new Fruit();
+            Orange myOrange = new Orange();
+            myOrange.EatFruit();
+
+
+            RanchStyle ranch = new RanchStyle("Stone", "Triple Pane", "Composite", "Blue");
+            ranch.OpenDoor();
+            Console.WriteLine(ranch.Roof);
 
         }
 
