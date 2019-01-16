@@ -24,8 +24,43 @@ namespace Classwork
             // StrutSample();
             // ComputerSample();
             // QuizExample();
-            FruitSample();
+            //FruitSample();
+            // ParamsSample();
+            ModifierExamples();
+
         }
+
+        static void ModifierExamples()
+        {
+            int test = 14;
+            Lesson11 myLesson = new Lesson11();
+            myLesson.RefSample(ref test);
+            Console.WriteLine(test);
+
+            string first, second;
+            myLesson.OutSample("John Doe  Mania", out first, out second);
+
+            Console.Write(first);
+            Console.Write(second);
+        }
+
+        static void ParamsSample()
+        {
+            Lesson11 lesson = new Lesson11();
+            lesson.UseParams(10, 3, 24, 36, 45, 120);
+
+            lesson.UseParams(); // passing 0
+
+            int[] intArray = { 2, 3, 4, 5, 6 };
+            lesson.UseParams(intArray);
+
+            lesson.UseParams2(1, "Happy", false, 34.5F);
+
+            lesson.OptionalParam(" Robin ");
+            lesson.OptionalParam("Matthew", 19);
+        }
+
+
         static void FruitSample()
         {
             Apple myApple = new Apple();
