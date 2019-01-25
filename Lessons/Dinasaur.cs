@@ -5,6 +5,8 @@ namespace Lessons
 {
     public abstract class Dinasaur : IPrehistoric
     {
+        public string Travel { get; set; } = "Walk";
+
         public abstract void EatFood();
 
         public abstract void Sleeps();
