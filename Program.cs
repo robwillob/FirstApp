@@ -32,9 +32,45 @@ namespace Classwork
             // DeconstructSample();
             // FinalizerSample();
             // IndexerSample();
-            PartialSample();
+            // PartialSample();
+            // AnotherHouseExample();
+            // GenericSample();
+            CollectionSample();
 
         }
+
+        static void CollectionSample()
+        {
+            CollectionExamples ce = new CollectionExamples();
+            ce.MyArrayListExample();
+            ce.myListExample();
+        }
+
+        static void GenericSample()
+        {
+            GenericList<int> myList = new GenericList<int>();
+            myList.Add(10);
+
+            GenericList<string> mySecondList = new GenericList<string>();
+            mySecondList.Add("Happy");
+
+            GenericList<TRex> myTRexList = new GenericList<TRex>();
+            myTRexList.Add(new TRex());
+        }
+
+        static void AnotherHouseExample()
+        {
+            House myHouse = new House()
+            {
+                Roof = "Shingles",
+                Window = "Double Pane",
+                PaintDoor = "Red",
+                Foundation = "Concrete"
+            };
+
+            Console.WriteLine("My windows choice is {0}", myHouse.Window);
+        }
+
 
         static void PartialSample()
         {
@@ -274,9 +310,9 @@ namespace Classwork
             // This sets the value of Red to the object
             myHouse.PaintDoor = "Red";
             myHouse.CloseDoor(); // the door closes
-            // This gets the value of Red from the object
+                                 // This gets the value of Red from the object
             Console.WriteLine(myHouse.PaintDoor); // red
-            // This is a second object instance of House.
+                                                  // This is a second object instance of House.
             House mySecondHouse = new House();
             mySecondHouse.PaintDoor = "green";
             Console.WriteLine(mySecondHouse.PaintDoor); // green
