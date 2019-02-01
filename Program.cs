@@ -24,7 +24,7 @@ namespace Classwork
             // StrutSample();
             // ComputerSample();
             // QuizExample();
-            //FruitSample();
+            // FruitSample();
             // ParamsSample();
             // ModifierExamples();
             // Lesson12();
@@ -35,9 +35,12 @@ namespace Classwork
             // PartialSample();
             // AnotherHouseExample();
             // GenericSample();
-            CollectionSample();
+            // CollectionSample();
 
         }
+
+
+
 
         static void CollectionSample()
         {
