@@ -1,6 +1,8 @@
 ﻿using System;
 using Lessons;
 using Quiz;
+using Advanced;
+
 /*This namespace represents the file folder that the class is in. */
 
 namespace Classwork
@@ -9,6 +11,10 @@ namespace Classwork
     //Class is a blueprint of an object.
     class Program
     {
+
+        public delegate void TryOn(string type);
+
+
         /*static is only one, means no copies; void is a return type-if we don't need to
          return any data back use void; Main is a method name(actions, functions, methods) and string etc is an array and a parameter
          Console is a class, WriteLine is a method with a parameter*/
@@ -36,10 +42,35 @@ namespace Classwork
             // AnotherHouseExample();
             // GenericSample();
             // CollectionSample();
-
+            // QuizLab1();
+            //DelegateSample();
+            MultiDelegateSample();
         }
 
+        public static void MultiDelegateSample()  //new method for 3rd sample  Slide #10
+            {
+            Hats moreHats = new Hats (7 );
+            TryOn someHats, niceHat, sadHat;  //3 objects of this delegate
 
+            niceHat = moreHats.FindLuckyHat; //taking the meth and assigning to the delegte
+            niceHat("Top");
+
+            sadHat = moreHats.FindUglyHat;//another delegate to a diff method then use var of the delegate and put in the word dunce
+            sadHat("Dunce");
+
+            someHats = niceHat + sadHat;  //niceHat and sadHat are assigned to someHats and are called thru FindLucyHat thus output is Cowboy
+            someHats("Cowboy");           // twice.
+        }
+
+        private static void DelegateSample()
+        {
+            Hats myHat = new Hats("Cowboy", 7);
+            TryOn theHat = myHat.TryOnHat;
+            theHat("I tried on a " + myHat.HatType + "hat that was size" + myHat.HatSize);
+            Hats mySecondHat = new Hats();  //calling second delegate
+        }
+
+       
 
 
         static void CollectionSample()
