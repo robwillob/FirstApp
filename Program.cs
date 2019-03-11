@@ -44,7 +44,17 @@ namespace Classwork
             // CollectionSample();
             // QuizLab1();
             //DelegateSample();
-            MultiDelegateSample();
+            // MultiDelegateSample();
+            EventSample();
+
+        }
+        // create method
+        private static void EventSample()
+        {
+            Coats myCoat = new Coats();
+            string result = myCoat.MyResult;
+            Console.WriteLine(result);
+
         }
 
         public static void MultiDelegateSample()  //new method for 3rd sample  Slide #10
