@@ -45,9 +45,19 @@ namespace Classwork
             // QuizLab1();
             //DelegateSample();
             // MultiDelegateSample();
-            EventSample();
+            // EventSample();
+            LambdaSample();
+
 
         }
+        private static void LambdaSample()
+        {
+            LambdaExample myLambda = new LambdaExample();
+            Console.WriteLine(myLambda.MyLambdaOne(5));
+
+        }
+
+        
         // create method
         private static void EventSample()
         {
