@@ -46,10 +46,32 @@ namespace Classwork
             //DelegateSample();
             // MultiDelegateSample();
             // EventSample();
-            LambdaSample();
+            // LambdaSample();
+            // MyExceptionSample();
+            MyLinqSample();
+           
 
 
         }
+
+        private static void MyLinqSample()
+        {
+            LinqExample myLinq = new LinqExample();
+            myLinq.ShowMeLinq();
+        }
+
+        public void MyArrayException()
+        {
+
+        }
+
+        private static void MyExceptionSample()
+        {
+            ExceptionExamples myEx = new ExceptionExamples();
+            //myEx.MyException();
+            myEx.MyArrayException();
+        }
+
         private static void LambdaSample()
         {
             LambdaExample myLambda = new LambdaExample();
