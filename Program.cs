@@ -2,6 +2,7 @@
 using Lessons;
 using Quiz;
 using Advanced;
+using System.Threading;
 
 /*This namespace represents the file folder that the class is in. */
 
@@ -48,11 +49,63 @@ namespace Classwork
             // EventSample();
             // LambdaSample();
             // MyExceptionSample();
-            MyLinqSample();
-           
+            //MyLinqSample();
+            // ThreadSample();
+            //ThreadPassingDataSample();
+            ThreadStateSample();
 
 
         }
+
+        private static void ThreadStateSample()
+        {
+            ThreadWithState tws = new ThreadWithState("This report displays the number {0}", 42,
+                new ExampleCallback(ResultCallback));
+
+            Thread t = new Thread(new ThreadStart(tws.ThreadProc));
+            t.Start();
+            Console.WriteLine("Main thread does some work, then waits.");
+            t.Join();
+            Console.WriteLine("Independent task has completed; main thread ends.");
+        }
+
+        public static void ResultCallback(int lineCount)
+        {
+            Console.WriteLine("Independent task printed {0} lines.", lineCount);
+        }
+
+        private static void ThreadPassingDataSample()
+        {
+            ThreadDataExample dataExample = new ThreadDataExample();
+            Thread thread = new Thread(() => dataExample.SimpleMethod(100));
+            //thread.Start();
+
+            Thread secondThread = new Thread(dataExample.DifferentMethod);
+            secondThread.Start("I see");
+        }
+
+        private static void ThreadSample()
+        {
+            Thread t = new Thread(WriteY);
+            t.Start();
+
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine("XX");
+            }
+        }
+
+        private static void WriteY()
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine("Y");
+            }
+        }
+
+
+
+    
 
         private static void MyLinqSample()
         {
